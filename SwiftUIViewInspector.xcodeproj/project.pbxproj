@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17894F6D297FE1980041EF20 /* SwiftUIViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 17894F6C297FE1980041EF20 /* SwiftUIViewInspector */; };
 		18F86B56297FCC91000366C0 /* SwiftUIViewInspectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F86B55297FCC91000366C0 /* SwiftUIViewInspectorApp.swift */; };
 		18F86B58297FCC91000366C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F86B57297FCC91000366C0 /* ContentView.swift */; };
 		18F86B5A297FCC92000366C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F86B59297FCC92000366C0 /* Assets.xcassets */; };
 		18F86B5E297FCC92000366C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F86B5D297FCC92000366C0 /* Preview Assets.xcassets */; };
-		18F86B67297FD03B000366C0 /* SwiftUIInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 18F86B66297FD03B000366C0 /* SwiftUIInspector */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,7 +19,7 @@
 		18F86B55297FCC91000366C0 /* SwiftUIViewInspectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewInspectorApp.swift; sourceTree = "<group>"; };
 		18F86B57297FCC91000366C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18F86B59297FCC92000366C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		18F86B5B297FCC92000366C0 /* DemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoApp.entitlements; sourceTree = "<group>"; };
+		18F86B5B297FCC92000366C0 /* SwiftUIViewInspectorExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIViewInspectorExample.entitlements; sourceTree = "<group>"; };
 		18F86B5D297FCC92000366C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18F86B64297FCCFB000366C0 /* SwiftUIInspector */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIInspector; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -29,7 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F86B67297FD03B000366C0 /* SwiftUIInspector in Frameworks */,
+				17894F6D297FE1980041EF20 /* SwiftUIViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +40,7 @@
 			isa = PBXGroup;
 			children = (
 				18F86B64297FCCFB000366C0 /* SwiftUIInspector */,
-				18F86B54297FCC91000366C0 /* DemoApp */,
+				18F86B54297FCC91000366C0 /* SwiftUIViewInspectorExample */,
 				18F86B53297FCC91000366C0 /* Products */,
 				18F86B65297FD03B000366C0 /* Frameworks */,
 			);
@@ -54,16 +54,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		18F86B54297FCC91000366C0 /* DemoApp */ = {
+		18F86B54297FCC91000366C0 /* SwiftUIViewInspectorExample */ = {
 			isa = PBXGroup;
 			children = (
 				18F86B55297FCC91000366C0 /* SwiftUIViewInspectorApp.swift */,
 				18F86B57297FCC91000366C0 /* ContentView.swift */,
 				18F86B59297FCC92000366C0 /* Assets.xcassets */,
-				18F86B5B297FCC92000366C0 /* DemoApp.entitlements */,
+				18F86B5B297FCC92000366C0 /* SwiftUIViewInspectorExample.entitlements */,
 				18F86B5C297FCC92000366C0 /* Preview Content */,
 			);
-			path = DemoApp;
+			path = SwiftUIViewInspectorExample;
 			sourceTree = "<group>";
 		};
 		18F86B5C297FCC92000366C0 /* Preview Content */ = {
@@ -98,7 +98,7 @@
 			);
 			name = DemoApp;
 			packageProductDependencies = (
-				18F86B66297FD03B000366C0 /* SwiftUIInspector */,
+				17894F6C297FE1980041EF20 /* SwiftUIViewInspector */,
 			);
 			productName = SwiftUIViewInspector;
 			productReference = 18F86B52297FCC91000366C0 /* DemoApp.app */;
@@ -276,10 +276,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DemoApp/DemoApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIViewInspectorExample/SwiftUIViewInspectorExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "DemoApp/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "SwiftUIViewInspectorExample/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -312,10 +312,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DemoApp/DemoApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIViewInspectorExample/SwiftUIViewInspectorExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "DemoApp/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "SwiftUIViewInspectorExample/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -367,9 +367,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		18F86B66297FD03B000366C0 /* SwiftUIInspector */ = {
+		17894F6C297FE1980041EF20 /* SwiftUIViewInspector */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = SwiftUIInspector;
+			productName = SwiftUIViewInspector;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
