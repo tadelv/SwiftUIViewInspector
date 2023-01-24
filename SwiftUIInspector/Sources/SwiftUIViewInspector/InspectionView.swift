@@ -97,6 +97,7 @@ extension InspectionView {
       view.layer.borderWidth = 2.0
       view.layer.compositingFilter = "differenceBlendMode"
 #else
+      view.wantsLayer = true
       view.layer?.borderColor = PlatformColor.red.cgColor
       view.layer?.borderWidth = 2.0
       view.layer?.compositingFilter = "differenceBlendMode"
