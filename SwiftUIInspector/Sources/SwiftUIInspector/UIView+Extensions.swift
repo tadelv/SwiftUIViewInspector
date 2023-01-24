@@ -14,7 +14,8 @@ import AppKit
 extension UIView {
   func candidateAt(_ point: CGPoint) -> UIView? {
     superview?.superview?.subviews.filter {
-      $0.frame.contains(point)
+      $0.frame.contains(point) &&
+      $0 != self.superview
     }.first
   }
   
