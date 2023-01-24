@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17894F6D297FE1980041EF20 /* SwiftUIViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 17894F6C297FE1980041EF20 /* SwiftUIViewInspector */; };
+		17894F7029800EB60041EF20 /* TriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17894F6F29800EB60041EF20 /* TriangleShape.swift */; };
 		18F86B56297FCC91000366C0 /* SwiftUIViewInspectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F86B55297FCC91000366C0 /* SwiftUIViewInspectorApp.swift */; };
 		18F86B58297FCC91000366C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F86B57297FCC91000366C0 /* ContentView.swift */; };
 		18F86B5A297FCC92000366C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F86B59297FCC92000366C0 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17894F6F29800EB60041EF20 /* TriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleShape.swift; sourceTree = "<group>"; };
 		18F86B52297FCC91000366C0 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F86B55297FCC91000366C0 /* SwiftUIViewInspectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewInspectorApp.swift; sourceTree = "<group>"; };
 		18F86B57297FCC91000366C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +38,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17894F6E29800E7E0041EF20 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18F86B57297FCC91000366C0 /* ContentView.swift */,
+				17894F6F29800EB60041EF20 /* TriangleShape.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		18F86B49297FCC91000366C0 = {
 			isa = PBXGroup;
 			children = (
@@ -59,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				18F86B55297FCC91000366C0 /* SwiftUIViewInspectorApp.swift */,
-				18F86B57297FCC91000366C0 /* ContentView.swift */,
+				17894F6E29800E7E0041EF20 /* Views */,
 				18F86B59297FCC92000366C0 /* Assets.xcassets */,
 				18F86B5B297FCC92000366C0 /* SwiftUIViewInspectorExample.entitlements */,
 				18F86B5C297FCC92000366C0 /* Preview Content */,
@@ -157,6 +168,7 @@
 			files = (
 				18F86B58297FCC91000366C0 /* ContentView.swift in Sources */,
 				18F86B56297FCC91000366C0 /* SwiftUIViewInspectorApp.swift in Sources */,
+				17894F7029800EB60041EF20 /* TriangleShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
