@@ -55,7 +55,9 @@
 				18F86B53297FCC91000366C0 /* Products */,
 				18F86B65297FD03B000366C0 /* Frameworks */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
 			usesTabs = 1;
 		};
 		18F86B53297FCC91000366C0 /* Products */ = {
