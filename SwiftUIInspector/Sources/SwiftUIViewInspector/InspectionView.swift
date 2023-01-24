@@ -56,6 +56,7 @@ struct InspectionView: UIViewRepresentable {
       let view = UIView(frame: .init(origin: .zero, size: size))
       view.layer.borderColor = UIColor.red.cgColor
       view.layer.borderWidth = 2.0
+        view.layer.compositingFilter = "differenceBlendMode"
       view.tag = viewTag
       return view
     }

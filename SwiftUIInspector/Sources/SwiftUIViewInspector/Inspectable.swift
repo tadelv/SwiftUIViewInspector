@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct Inspectable: ViewModifier {
-  let view = InspectionView()
+let view = InspectionView()
   public func body(content: Content) -> some View {
     content
       .overlay(view)
