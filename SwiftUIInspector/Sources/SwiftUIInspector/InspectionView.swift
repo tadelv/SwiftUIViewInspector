@@ -6,35 +6,29 @@
 //
 
 import SwiftUI
-#if os(iOS)
-import UIKit
+#if os(macOS)
+typealias PlatformView = NSView
+typealias PlatformViewRepresentable = NSViewRepresentable
+typealias PlatformGestureRecognizer = NSClickGestureRecognizer
+typealias PlatformViewRepresentableContext = NSViewRepresentableContext
+typealias PlatformColor = NSColor
 #else
-import AppKit
+import UIKit
+typealias PlatformView = UIView
+typealias PlatformViewRepresentable = UIViewRepresentable
+typealias PlatformGestureRecognizer = UITapGestureRecognizer
+typealias PlatformViewRepresentableContext = UIViewRepresentableContext
+typealias PlatformColor = UIColor
+typealias NSViewType = Void
 #endif
 
-struct InspectionView: UIViewRepresentable {
+struct InspectionView: PlatformViewRepresentable {
+  class Coordinator: NSObject {
+    var view: PlatformView?
 
-  func makeUIView(context: UIViewRepresentableContext<InspectionView>) -> UIView {
-    let view = UIView()
-    let gesture = UITapGestureRecognizer(target: context.coordinator,
-                                         action: #selector(Coordinator.tapped))
-    view.addGestureRecognizer(gesture)
-    view.accessibilityLabel = "InspectionView"
-    context.coordinator.view = view
-    return view
-  }
-
-  func updateUIView(_ uiView: UIView,
-                    context: UIViewRepresentableContext<InspectionView>) {}
-
-  public class Coordinator: NSObject {
-    var view: UIView?
-
-    private let viewTag = 898274112
-
-    var candidate: UIView? {
+    var candidate: PlatformView? {
       willSet {
-        candidate?.viewWithTag(viewTag)?.removeFromSuperview()
+        borderView?.removeFromSuperview()
       }
       didSet {
         guard let candidate else {
@@ -43,25 +37,60 @@ struct InspectionView: UIViewRepresentable {
         candidate.addSubview(borderView(candidate.frame.size))
       }
     }
+    var borderView: PlatformView?
 
     override init() {}
 
-    @objc func tapped(gesture:UITapGestureRecognizer) {
+    @objc func tapped(_ gesture: PlatformGestureRecognizer) {
       guard let parent = view?.superview?.superview else { return }
       let point = gesture.location(in: parent)
       candidate = view?.candidateAt(point)
     }
 
-    private func borderView(_ size: CGSize) -> UIView {
-      let view = UIView(frame: .init(origin: .zero, size: size))
-      view.layer.borderColor = UIColor.red.cgColor
+    private func borderView(_ size: CGSize) -> PlatformView {
+      let view = PlatformView(frame: .init(origin: .zero, size: size))
+      #if os(iOS)
+      view.layer.borderColor = PlatformColor.red.cgColor
       view.layer.borderWidth = 2.0
-      view.tag = viewTag
+      #else
+      view.layer?.borderColor = PlatformColor.red.cgColor
+      view.layer?.borderWidth = 2.0
+      #endif
+      borderView = view
       return view
     }
   }
 
   public func makeCoordinator() -> InspectionView.Coordinator {
     return Coordinator()
+  }
+
+  // MARK: iOS
+  func makeUIView(context: PlatformViewRepresentableContext<InspectionView>) -> PlatformView {
+    makePlatformView(context: context)
+  }
+
+  func updateUIView(_ uiView: PlatformView,
+                    context: PlatformViewRepresentableContext<InspectionView>) {}
+
+  // MARK: macOS
+
+  func makeNSView(context: Context) -> some PlatformView {
+    makePlatformView(context: context)
+  }
+
+  func updateNSView(_ nsView: NSViewType, context: Context) {}
+
+  // MARK: agnostic
+  func makePlatformView(context: PlatformViewRepresentableContext<InspectionView>) -> PlatformView {
+    let view = PlatformView()
+    let gesture = PlatformGestureRecognizer(target: context.coordinator,
+                                            action: #selector(Coordinator.tapped))
+    view.addGestureRecognizer(gesture)
+#if os(iOS)
+    view.accessibilityLabel = "InspectionView"
+#endif
+    context.coordinator.view = view
+    return view
   }
 }

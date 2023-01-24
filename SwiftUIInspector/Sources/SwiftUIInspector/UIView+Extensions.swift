@@ -11,8 +11,8 @@ import UIKit
 import AppKit
 #endif
 
-extension UIView {
-  func candidateAt(_ point: CGPoint) -> UIView? {
+extension PlatformView {
+  func candidateAt(_ point: CGPoint) -> PlatformView? {
     superview?.superview?.subviews.filter {
       $0.frame.contains(point) &&
       $0 != self.superview
