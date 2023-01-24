@@ -8,16 +8,16 @@
 import SwiftUI
 
 public struct Inspectable: ViewModifier {
-let view = InspectionView()
-  public func body(content: Content) -> some View {
-    content
-      .overlay(view)
-  }
+    let view = InspectionView()
+    public func body(content: Content) -> some View {
+        content
+            .overlay(view)
+    }
 }
 
 public extension View {
-  func inspectable() -> some View {
-    self
-      .modifier(Inspectable())
-  }
+    func inspectable() -> some View {
+        self
+            .modifier(Inspectable())
+    }
 }

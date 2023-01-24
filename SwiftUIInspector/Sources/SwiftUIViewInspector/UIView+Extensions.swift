@@ -12,14 +12,14 @@ import AppKit
 #endif
 
 extension PlatformView {
-  func candidateAt(_ point: CGPoint) -> PlatformView? {
-    superview?.superview?.subviews.filter {
-      $0.frame.contains(point) &&
-      $0 != self.superview
-    }.first
-  }
-  
-  func printViewAt(_ point: CGPoint) {
-    print(String(describing: candidateAt(point)))
-  }
+    func candidateAt(_ point: CGPoint) -> PlatformView? {
+        superview?.superview?.subviews.filter {
+            $0.frame.contains(point) &&
+            $0 != self.superview
+        }.first
+    }
+
+    func printViewAt(_ point: CGPoint) {
+        print(String(describing: candidateAt(point)))
+    }
 }
