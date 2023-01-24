@@ -95,9 +95,11 @@ extension InspectionView {
 #if os(iOS)
       view.layer.borderColor = PlatformColor.red.cgColor
       view.layer.borderWidth = 2.0
+      view.layer.compositingFilter = "differenceBlendMode"
 #else
       view.layer?.borderColor = PlatformColor.red.cgColor
       view.layer?.borderWidth = 2.0
+      view.layer?.compositingFilter = "differenceBlendMode"
 #endif
       borderView = view
       return view
