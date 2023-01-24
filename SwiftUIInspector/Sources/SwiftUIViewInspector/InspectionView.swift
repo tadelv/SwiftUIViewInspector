@@ -23,6 +23,49 @@ typealias NSViewType = Void
 #endif
 
 struct InspectionView: PlatformViewRepresentable {
+  public func makeCoordinator() -> InspectionView.Coordinator {
+    return Coordinator()
+  }
+
+  // MARK: iOS
+  func makeUIView(context: PlatformViewRepresentableContext<InspectionView>) -> PlatformView {
+    makePlatformView(context: context)
+  }
+
+  func updateUIView(_ uiView: PlatformView,
+                    context: PlatformViewRepresentableContext<InspectionView>) {}
+
+  // MARK: macOS
+
+  func makeNSView(context: Context) -> some PlatformView {
+    makePlatformView(context: context)
+  }
+
+  func updateNSView(_ nsView: NSViewType, context: Context) {}
+
+  // MARK: agnostic
+  func makePlatformView(context: PlatformViewRepresentableContext<InspectionView>) -> PlatformView {
+    let view = PlatformView()
+    let gesture = PlatformGestureRecognizer(target: context.coordinator,
+                                            action: #selector(Coordinator.tapped))
+    #if os(iOS)
+    gesture.numberOfTapsRequired = 3
+    #else
+    gesture.numberOfClicksRequired = 3
+    #endif
+
+    view.addGestureRecognizer(gesture)
+    #if os(iOS)
+    view.accessibilityLabel = "InspectionView"
+    #else
+    view.setAccessibilityLabel("InspectionView")
+    #endif
+    context.coordinator.view = view
+    return view
+  }
+}
+
+extension InspectionView {
   class Coordinator: NSObject {
     var view: PlatformView?
 
@@ -49,48 +92,15 @@ struct InspectionView: PlatformViewRepresentable {
 
     private func borderView(_ size: CGSize) -> PlatformView {
       let view = PlatformView(frame: .init(origin: .zero, size: size))
-      #if os(iOS)
+#if os(iOS)
       view.layer.borderColor = PlatformColor.red.cgColor
       view.layer.borderWidth = 2.0
-      #else
+#else
       view.layer?.borderColor = PlatformColor.red.cgColor
       view.layer?.borderWidth = 2.0
-      #endif
+#endif
       borderView = view
       return view
     }
-  }
-
-  public func makeCoordinator() -> InspectionView.Coordinator {
-    return Coordinator()
-  }
-
-  // MARK: iOS
-  func makeUIView(context: PlatformViewRepresentableContext<InspectionView>) -> PlatformView {
-    makePlatformView(context: context)
-  }
-
-  func updateUIView(_ uiView: PlatformView,
-                    context: PlatformViewRepresentableContext<InspectionView>) {}
-
-  // MARK: macOS
-
-  func makeNSView(context: Context) -> some PlatformView {
-    makePlatformView(context: context)
-  }
-
-  func updateNSView(_ nsView: NSViewType, context: Context) {}
-
-  // MARK: agnostic
-  func makePlatformView(context: PlatformViewRepresentableContext<InspectionView>) -> PlatformView {
-    let view = PlatformView()
-    let gesture = PlatformGestureRecognizer(target: context.coordinator,
-                                            action: #selector(Coordinator.tapped))
-    view.addGestureRecognizer(gesture)
-#if os(iOS)
-    view.accessibilityLabel = "InspectionView"
-#endif
-    context.coordinator.view = view
-    return view
   }
 }
