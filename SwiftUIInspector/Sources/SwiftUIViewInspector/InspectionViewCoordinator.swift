@@ -27,7 +27,7 @@ extension InspectionView {
 
 		func find(point: PlatformPoint, in view: PlatformView) {
 			candidate = nil
-			guard let parentViews = view.superview?.superview?.superview?.subviews else { return }
+			guard let parentViews = view.superview?.superview?.subviews else { return }
 			#if os(iOS)
 			for subview in parentViews where subview.frame.contains(view.convert(point, to: view.window)) &&
 			subview != view.superview {
