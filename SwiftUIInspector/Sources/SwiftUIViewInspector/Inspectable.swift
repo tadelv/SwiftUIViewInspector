@@ -11,7 +11,7 @@ public struct Inspectable: ViewModifier {
     let view = InspectionView()
     public func body(content: Content) -> some View {
         content
-            .overlay(view)
+            .overlay(view.allowsHitTesting(false))
     }
 }
 
