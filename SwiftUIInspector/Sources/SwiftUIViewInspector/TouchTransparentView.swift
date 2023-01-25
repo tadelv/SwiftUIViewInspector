@@ -16,14 +16,14 @@ final class TouchTransparentView: PlatformView {
     var pointInsideCallback: (PlatformPoint, PlatformView) -> Void = { _, _ in }
 
     #if os(iOS)
-        override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+		override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
 			superview?.isUserInteractionEnabled = false
-            pointInsideCallback(point, self)
+			pointInsideCallback(point, self)
 			DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak superview] in
 				superview?.isUserInteractionEnabled = true
 			}
-            return false
-        }
+			return nil
+		}
     #else
         #warning("input handling on macOS not implemented yet")
     #endif
