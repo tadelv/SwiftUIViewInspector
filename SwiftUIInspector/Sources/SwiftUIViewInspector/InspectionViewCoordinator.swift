@@ -14,22 +14,22 @@ extension InspectionView {
 		var candidate: PlatformView? {
 			willSet {
 				borderView?.removeFromSuperview()
-#if os(iOS)
-        candidateInfoView?.removeFromSuperview()
-#endif
+				#if os(iOS)
+				candidateInfoView?.removeFromSuperview()
+				#endif
 			}
 			didSet {
 				guard let candidate else {
 					return
 				}
 				candidate.addSubview(borderView(candidate.frame.size))
-        displayViewInfo(candidate)
+				displayViewInfo(candidate)
 			}
 		}
 		var borderView: PlatformView?
-#if os(iOS)
-    var candidateInfoView: UILabel?
-#endif
+		#if os(iOS)
+		var candidateInfoView: UILabel?
+		#endif
 
 		override init() {
 
@@ -70,40 +70,40 @@ extension InspectionView {
 			return view
 		}
 
-    func displayViewInfo(_ view: PlatformView) {
+		func displayViewInfo(_ view: PlatformView) {
 #if os(iOS)
-      candidateInfoView?.removeFromSuperview()
-      candidateInfoView = nil
-      guard let window = view.window else {
-        return
-      }
+			candidateInfoView?.removeFromSuperview()
+			candidateInfoView = nil
+			guard let window = view.window else {
+				return
+			}
 
-      candidateInfoView = UILabel()
-      guard let candidateInfoView else { return }
-      candidateInfoView.translatesAutoresizingMaskIntoConstraints = false
-      candidateInfoView.text = view.frame.displayFriendly
-      candidateInfoView.font = .monospacedDigitSystemFont(ofSize: 10, weight: .medium)
-      candidateInfoView.backgroundColor = .blue
-      candidateInfoView.textColor = .white
-      candidateInfoView.layer.compositingFilter = "differenceBlendMode"
-      candidateInfoView.sizeToFit()
-      window.addSubview(candidateInfoView)
-      window.bringSubviewToFront(candidateInfoView)
-      NSLayoutConstraint.activate([
-        candidateInfoView.topAnchor.constraint(equalTo: window.safeAreaLayoutGuide.topAnchor),
-        candidateInfoView.leadingAnchor.constraint(equalTo: window.safeAreaLayoutGuide.leadingAnchor),
-      ])
+			candidateInfoView = UILabel()
+			guard let candidateInfoView else { return }
+			candidateInfoView.translatesAutoresizingMaskIntoConstraints = false
+			candidateInfoView.text = view.frame.displayFriendly
+			candidateInfoView.font = .monospacedDigitSystemFont(ofSize: 10, weight: .medium)
+			candidateInfoView.backgroundColor = .blue
+			candidateInfoView.textColor = .white
+			candidateInfoView.layer.compositingFilter = "differenceBlendMode"
+			candidateInfoView.sizeToFit()
+			window.addSubview(candidateInfoView)
+			window.bringSubviewToFront(candidateInfoView)
+			NSLayoutConstraint.activate([
+				candidateInfoView.topAnchor.constraint(equalTo: window.safeAreaLayoutGuide.topAnchor),
+				candidateInfoView.leadingAnchor.constraint(equalTo: window.safeAreaLayoutGuide.leadingAnchor),
+			])
 #endif
-    }
+		}
 	}
 }
 
 #if os(iOS)
 extension CGRect {
-  var displayFriendly: String {
-    """
-    x: \(round(origin.x * 100) / 100), y: \(round(origin.y * 100) / 100), \(round(size.width * 100) / 100)x\(round(size.height * 100) / 100)
-    """
-  }
+	var displayFriendly: String {
+		"""
+		x: \(round(origin.x * 100) / 100), y: \(round(origin.y * 100) / 100), \(round(size.width * 100) / 100)x\(round(size.height * 100) / 100)
+		"""
+	}
 }
 #endif
