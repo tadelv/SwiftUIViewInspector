@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		17894F6F29800EB60041EF20 /* TriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleShape.swift; sourceTree = "<group>"; };
-		18F86B52297FCC91000366C0 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F86B52297FCC91000366C0 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F86B55297FCC91000366C0 /* SwiftUIViewInspectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewInspectorApp.swift; sourceTree = "<group>"; };
 		18F86B57297FCC91000366C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18F86B59297FCC92000366C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		18F86B53297FCC91000366C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18F86B52297FCC91000366C0 /* DemoApp.app */,
+				18F86B52297FCC91000366C0 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,9 +98,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		18F86B51297FCC91000366C0 /* DemoApp */ = {
+		18F86B51297FCC91000366C0 /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18F86B61297FCC92000366C0 /* Build configuration list for PBXNativeTarget "DemoApp" */;
+			buildConfigurationList = 18F86B61297FCC92000366C0 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
 				18F86B4E297FCC91000366C0 /* Sources */,
 				18F86B4F297FCC91000366C0 /* Frameworks */,
@@ -110,12 +110,12 @@
 			);
 			dependencies = (
 			);
-			name = DemoApp;
+			name = Example;
 			packageProductDependencies = (
 				17894F6C297FE1980041EF20 /* SwiftUIViewInspector */,
 			);
 			productName = SwiftUIViewInspector;
-			productReference = 18F86B52297FCC91000366C0 /* DemoApp.app */;
+			productReference = 18F86B52297FCC91000366C0 /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18F86B51297FCC91000366C0 /* DemoApp */,
+				18F86B51297FCC91000366C0 /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -377,7 +377,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18F86B61297FCC92000366C0 /* Build configuration list for PBXNativeTarget "DemoApp" */ = {
+		18F86B61297FCC92000366C0 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18F86B62297FCC92000366C0 /* Debug */,
