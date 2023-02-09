@@ -2,6 +2,9 @@
 
 SwiftUIViewInspector is a library that makes it easier to inspect SwiftUI views in Xcode, providing a set of tools for debugging and testing your user interface.
 
+<br/>
+<img src="https://user-images.githubusercontent.com/15943419/217849498-9a4e92f4-cb08-4e47-9333-c94149d281c5.png" width="300">
+
 ## Requirements
 
 - Xcode 12 or later
