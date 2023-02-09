@@ -91,7 +91,7 @@ extension InspectionView {
 			window.bringSubviewToFront(candidateInfoView)
 			NSLayoutConstraint.activate([
 				candidateInfoView.topAnchor.constraint(equalTo: window.safeAreaLayoutGuide.topAnchor),
-				candidateInfoView.leadingAnchor.constraint(equalTo: window.safeAreaLayoutGuide.leadingAnchor),
+				candidateInfoView.leadingAnchor.constraint(equalTo: window.safeAreaLayoutGuide.leadingAnchor, constant: 4)
 			])
 #endif
 		}
