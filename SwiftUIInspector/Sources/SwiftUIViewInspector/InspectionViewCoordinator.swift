@@ -81,7 +81,7 @@ extension InspectionView {
 			candidateInfoView = UILabel()
 			guard let candidateInfoView else { return }
 			candidateInfoView.translatesAutoresizingMaskIntoConstraints = false
-			candidateInfoView.text = view.frame.displayFriendly
+			candidateInfoView.text = view.frame.description
 			candidateInfoView.font = .monospacedDigitSystemFont(ofSize: 10, weight: .medium)
 			candidateInfoView.backgroundColor = .blue
 			candidateInfoView.textColor = .white
@@ -100,7 +100,7 @@ extension InspectionView {
 
 #if os(iOS)
 extension CGRect {
-	var displayFriendly: String {
+	var description: String {
 		"""
 		x: \(round(origin.x * 100) / 100), y: \(round(origin.y * 100) / 100), \(round(size.width * 100) / 100)x\(round(size.height * 100) / 100)
 		"""
