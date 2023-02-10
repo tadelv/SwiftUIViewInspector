@@ -17,13 +17,13 @@
 
 /* Begin PBXFileReference section */
 		17894F6F29800EB60041EF20 /* TriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleShape.swift; sourceTree = "<group>"; };
+		18BE82ED299636DC00401F72 /* SwiftUIViewInspector */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUIViewInspector; path = ..; sourceTree = "<group>"; };
 		18F86B52297FCC91000366C0 /* SwiftUIViewInspectorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIViewInspectorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F86B55297FCC91000366C0 /* SwiftUIViewInspectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewInspectorApp.swift; sourceTree = "<group>"; };
 		18F86B57297FCC91000366C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18F86B59297FCC92000366C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F86B5B297FCC92000366C0 /* SwiftUIViewInspectorExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIViewInspectorExample.entitlements; sourceTree = "<group>"; };
 		18F86B5D297FCC92000366C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		18F86B64297FCCFB000366C0 /* SwiftUIInspector */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIInspector; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,7 @@
 		18F86B49297FCC91000366C0 = {
 			isa = PBXGroup;
 			children = (
-				18F86B64297FCCFB000366C0 /* SwiftUIInspector */,
+				18BE82ED299636DC00401F72 /* SwiftUIViewInspector */,
 				18F86B54297FCC91000366C0 /* SwiftUIViewInspectorExample */,
 				18F86B53297FCC91000366C0 /* Products */,
 				18F86B65297FD03B000366C0 /* Frameworks */,
