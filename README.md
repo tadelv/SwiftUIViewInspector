@@ -20,11 +20,15 @@ SwiftUIViewInspector can be installed using Swift Package Manager by adding the 
 
 To use SwiftUIViewInspector, you need to add the following line of code to your `SceneDelegate.swift` file:
 
-```import SwiftUIViewInspector```
+```Swift
+import SwiftUIViewInspector
+```
 
 Then, in your `Scene` function, add the following line to inspect the view hierarchy of your SwiftUI app:
 
-```let contentView = ContentView().inspect()```
+```Swift
+let contentView = ContentView().inspect()
+```
 
 Now, you can interact with the view hierarchy in Xcode, inspect the properties of each view, and see the layout and presentation details.
 
