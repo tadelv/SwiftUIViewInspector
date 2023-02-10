@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		17894F6F29800EB60041EF20 /* TriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleShape.swift; sourceTree = "<group>"; };
-		18F86B52297FCC91000366C0 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F86B52297FCC91000366C0 /* SwiftUIViewInspectorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIViewInspectorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F86B55297FCC91000366C0 /* SwiftUIViewInspectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewInspectorApp.swift; sourceTree = "<group>"; };
 		18F86B57297FCC91000366C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18F86B59297FCC92000366C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		18F86B53297FCC91000366C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18F86B52297FCC91000366C0 /* Example.app */,
+				18F86B52297FCC91000366C0 /* SwiftUIViewInspectorExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,9 +98,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		18F86B51297FCC91000366C0 /* Example */ = {
+		18F86B51297FCC91000366C0 /* SwiftUIViewInspectorExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18F86B61297FCC92000366C0 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = 18F86B61297FCC92000366C0 /* Build configuration list for PBXNativeTarget "SwiftUIViewInspectorExample" */;
 			buildPhases = (
 				18F86B4E297FCC91000366C0 /* Sources */,
 				18F86B4F297FCC91000366C0 /* Frameworks */,
@@ -110,12 +110,12 @@
 			);
 			dependencies = (
 			);
-			name = Example;
+			name = SwiftUIViewInspectorExample;
 			packageProductDependencies = (
 				17894F6C297FE1980041EF20 /* SwiftUIViewInspector */,
 			);
 			productName = SwiftUIViewInspector;
-			productReference = 18F86B52297FCC91000366C0 /* Example.app */;
+			productReference = 18F86B52297FCC91000366C0 /* SwiftUIViewInspectorExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18F86B51297FCC91000366C0 /* Example */,
+				18F86B51297FCC91000366C0 /* SwiftUIViewInspectorExample */,
 			);
 		};
 /* End PBXProject section */
@@ -314,7 +314,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadel.SwiftUIViewInspectorDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftUIViewInspectorExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -353,7 +353,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadel.SwiftUIViewInspectorDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftUIViewInspectorExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -377,7 +377,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18F86B61297FCC92000366C0 /* Build configuration list for PBXNativeTarget "Example" */ = {
+		18F86B61297FCC92000366C0 /* Build configuration list for PBXNativeTarget "SwiftUIViewInspectorExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18F86B62297FCC92000366C0 /* Debug */,
