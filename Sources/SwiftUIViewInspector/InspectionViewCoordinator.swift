@@ -85,7 +85,6 @@ extension InspectionView {
 			candidateInfoView.font = .monospacedDigitSystemFont(ofSize: 10, weight: .medium)
 			candidateInfoView.backgroundColor = .blue
 			candidateInfoView.textColor = .white
-			candidateInfoView.layer.compositingFilter = "differenceBlendMode"
 			candidateInfoView.sizeToFit()
 			window.addSubview(candidateInfoView)
 			window.bringSubviewToFront(candidateInfoView)
