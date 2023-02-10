@@ -1,14 +1,13 @@
 # SwiftUIViewInspector
 
-SwiftUIViewInspector is a library that makes it easier to inspect SwiftUI views in Xcode, providing a set of tools for debugging and testing your user interface.
+SwiftUIViewInspector is a library that makes it easier to inspect SwiftUI views in Xcode, providing a set of tools for debugging and testing your user interface. It's an incredibly useful add-on for Xcode previews. No more guessing or debugging - just easy, direct access to the data you need to fine-tune your user interface.
 
 <br/>
 <img src="https://user-images.githubusercontent.com/15943419/217849498-9a4e92f4-cb08-4e47-9333-c94149d281c5.png" width="300">
 
 ## Requirements
 
-- Xcode 12 or later
-- Swift 5.3 or later
+- iOS 13 or higher
 
 ## Installation
 
@@ -27,7 +26,7 @@ import SwiftUIViewInspector
 Then, in your `Scene` function, add the following line to inspect the view hierarchy of your SwiftUI app:
 
 ```Swift
-let contentView = ContentView().inspect()
+let contentView = ContentView().inspectable()
 ```
 
 Now, you can interact with the view hierarchy in Xcode, inspect the properties of each view, and see the layout and presentation details.
